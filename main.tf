@@ -1,9 +1,18 @@
 provider "aws" {
+  shared_config_files      = ["/home/mdadmin/.aws/confif"]
+  shared_credentials_files = ["/home/mdadmin/.aws/credentils"]
+  profile                  = "default"
   #version = "~> 2.13.0"
+  
   region = "us-east-1"
+ 
 }
 
 provider "aws" {
+
+  shared_config_files      = ["/home/mdadmin/.aws/confif"]
+  shared_credentials_files = ["/home/mdadmin/.aws/credentils"]
+  profile                  = "default"
   alias = "us-east-2"
   region = "us-east-2"
 }
